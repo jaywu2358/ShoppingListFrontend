@@ -9,43 +9,43 @@ export default {
 
     createShoppingList(shoppingList) {
         this.state = store.state;
-        return http.post(`/lists/`, shoppingList);
+        return http.post(`lists/`, shoppingList);
     },
 
     viewAllItemsByListId(listId) {
         
-        return http.get(`/lists/${listId}`);
+        return http.get(`lists/${listId}`);
     },
 
     viewShoppingListByListId(listId) {
         this.state = store.state;
-        return http.get(`/lists/list/${listId}`);
+        return http.get(`lists/list/${listId}`);
     },
 
     viewShoppingListsByAccountId() {
         this.state = store.state;
-        return http.get(`/lists/account/mylists`);
+        return http.get(`lists/account/mylists`);
     },
 
     viewShoppingListsByGroupId(groupId) {
         this.state = store.state;
-        return http.get(`/lists/group?groupId=${groupId}`);
+        return http.get(`lists/group?groupId=${groupId}`);
     },
 
     removeShoppingList(listId) {
         this.state = store.state;
         const id = this.state.user.id;
-        return http.delete(`/lists/delete/${listId}?accountId=${id}`);
+        return http.delete(`lists/delete/${listId}?accountId=${id}`);
     },
 
     clearList(listId) {
         this.state = store.state;
-        return http.delete(`/lists/delete?listId=${listId}`);
+        return http.delete(`lists/delete?listId=${listId}`);
     },
 
     claimShoppingList(listId,shoppingList) {
         this.state = store.state;
-        return http.put(`/lists/${listId}/claim`,shoppingList);
+        return http.put(`lists/${listId}/claim`,shoppingList);
     }
 
 }
