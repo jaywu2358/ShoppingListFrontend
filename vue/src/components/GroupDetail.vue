@@ -204,6 +204,7 @@ h3 {
 }
 
 #container {
+    width: 100%;
     padding-top: 100px;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;

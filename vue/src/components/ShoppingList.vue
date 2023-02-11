@@ -322,6 +322,7 @@ h3 {
 }
 
 #container {
+  width: 100%;
   padding-top:75px;
   --bg: hsl(0, 100%, 10%);
   --color: rgb(54, 53, 52);

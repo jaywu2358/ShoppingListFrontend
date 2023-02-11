@@ -155,12 +155,13 @@ div #nav {
 
 #form {
   width: 60%;
+  height: 85%;
   border-radius: 24px;
   background-color: rgba(135, 122, 88, 0.45);
   box-shadow: 0px 2px 6px -1px rgba(109, 103, 103, 0.712);
   margin-top:75px;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 80px;
 
 }
 .form-signin {
@@ -270,10 +271,10 @@ input {
 
 .pyramid {
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 200px;
   position: relative;
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 200px;
+  max-height: 200px;
   transform-style: preserve-3d;
   transform: rotateY(326deg) rotateX(2deg) rotateZ(359deg);
   animation: rotate 5s linear infinite;

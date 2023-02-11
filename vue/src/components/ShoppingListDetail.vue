@@ -202,6 +202,7 @@ div#modify-form {
 tr {
     color:rgb(59, 55, 42);
     text-transform: uppercase;   
+    font-size: 14px;
 }
 td:hover{
     background-color: rgba(125, 118, 96, 0.6);
@@ -241,6 +242,7 @@ table {
 }
 
 #container {
+    width: 100%;
     display: grid;
     padding-top: 75px;
     grid-template-columns: 1fr 2fr 2fr 1fr;
@@ -248,7 +250,7 @@ table {
                         ". table-grid table-grid ."
                         ". add-form . . "
                         ". clear-list . .";
-    width: 90vw;
+    
     max-width: 100%;
  
 }
