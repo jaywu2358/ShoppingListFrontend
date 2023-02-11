@@ -456,4 +456,288 @@ input {
   }
 }
 
+@media only screen and (max-device-width: 480px) {
+  .alert-danger {
+  grid-area: alert;
+  color: rgb(227, 108, 108);
+  
+}
+
+img {
+  width: 40%;
+  min-width: 360px;
+  display: block;
+  margin: 0 auto;
+}
+
+body {
+
+  background-color: white;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+
+}
+
+div #nav {
+
+  display: none;
+
+}
+
+.register-header {
+
+    margin: 0px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: rgb(54, 52, 52);
+
+
+}
+
+#main-container {
+  padding-top: 75px;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+
+}
+
+#form {
+  width: 100%;
+  height: 88%;
+  border-radius: 24px;
+  background-color: rgba(135, 122, 88, 0.45);
+  box-shadow: 0px 2px 6px -1px rgba(109, 103, 103, 0.712);
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+.form-register {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 6fr 2fr 4fr 6fr;
+  grid-template-areas:  ". username-label username-input ."
+                        ". . email-validator ."
+                        ". password-label password-input ."
+                        ". . validator ."
+                        ". password-label-confirm password-confirm ."
+                        ". . alert ."
+                        ". login-link create-account-button .";
+                        
+  grid-template-rows: auto auto 100px auto auto 50px 50px  ;
+  
+}
+
+label {
+
+  font-weight: 10;
+  font-size:  16px;
+  padding-bottom: 20x;
+
+}
+
+
+.username-label {
+  
+  grid-area: username-label;
+
+}
+
+.username-input {
+
+  grid-area: username-input;
+  
+}
+
+.username-input:focus ~ .email-validator {
+  display: block;
+}
+
+
+.validemail {
+  color: rgb(105, 143, 105);
+   
+}
+
+.validemail:after {
+  content: '  ✓';
+}
+
+.email-validator {
+  grid-area: email-validator;
+  display: none;
+  background-color: rgba(0,0,0,.1);
+  border-radius: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: rgb(73, 73, 73);
+}
+
+.password-label {
+  
+  grid-area: password-label;
+  
+}
+
+.password-input:focus ~ .validator {
+  display:block;
+}
+
+.validator{
+  grid-area: validator;
+  display: none;
+  background-color: rgba(0,0,0,.1);
+  border-radius: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: rgb(73, 73, 73);
+}
+
+.valid {
+  color: rgb(105, 143, 105);
+}
+
+.valid:after {
+  
+  content: '  ✓';
+  
+}
+
+.password-label-confirm {
+
+  grid-area: password-label-confirm;
+
+}
+
+.password-input {
+  
+  grid-area: password-input;
+  
+}
+
+.password-input-confirm {
+
+  grid-area: password-confirm;
+
+}
+
+.create-account-button {
+
+  grid-area: create-account-button;
+
+}
+
+.login-link {
+
+  color: rgb(69, 69, 69);
+  padding-right: 10px;
+  grid-area: login-link;
+
+}
+
+input {
+
+  font-size:  16px; 
+  padding:  10px; 
+
+  height:  56px; 
+  border:  none; 
+  border-bottom:  solid 1px rgba(0,0,0,.1); 
+  background:  #fff; 
+  width:  auto; 
+  box-sizing:  border-box; 
+  transition:  all .3s linear; 
+  color:  #000; 
+  font-weight:  400;
+  
+}
+
+.create-account-button {
+  width:  auto;
+  min-width:  50px;
+  border-radius:  12px; 
+  text-align:  center; 
+  padding:  15px 40px;  
+  color:  rgb(80, 80, 80); 
+  font-size:  14px; 
+  box-shadow:  0px 2px 6px -1px rgba(109, 103, 103, 0.712); 
+  border:  none; 
+  background-color: rgba(135, 122, 88, 0.45);
+  
+}
+
+.create-account-button:hover {
+  background-color:  rgb(60, 60, 60);
+  color: rgb(217, 217, 217);
+  transition: 0.6s;
+}
+
+.create-account-button:active {
+  background-color: rgb(128, 128, 128);
+  border: 4px solid rgb(53, 53, 53);
+  transition: 0.1s;
+  
+}
+
+.pyramid {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transform: rotateY(326deg) rotateX(2deg) rotateZ(359deg);
+  animation: rotate 5s linear infinite;
+}
+.side {
+  width: 0;
+  height: 0;
+  position: absolute;
+  opacity: 0.7;
+  border: 100px solid transparent;
+  border-bottom: 200px solid rgba(109, 103, 103, 0.712);
+  border-top: 0px;
+}
+.one {
+  transform: rotateX(30deg);
+  transform-origin: 0 0;
+}
+.two {
+  transform-origin: 100px 0;
+  transform: rotateY(90deg) rotateX(-30deg);
+  border-bottom-color: rgba(109, 103, 103, 0.712);
+}
+.three {
+  transform-origin: 100px 0;
+  transform: rotateY(270deg) rotateX(-30deg);
+  border-bottom-color: rgba(109, 103, 103, 0.712);
+}
+.four {
+  transform-origin: 100px 0;
+  transform: rotateY(0) rotateX(-30deg);
+  border-bottom-color: rgba(109, 103, 103, 0.712);
+}
+.base {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translateY(73px) rotateX(90deg);
+  border: 0;
+  background: rgba(109, 103, 103, 0.712);
+}
+@keyframes rotate {
+  from {
+    transform: rotateY(0)
+      rotateX(30deg) rotateZ(30deg);
+  }
+  to {
+    transform: rotateY(360deg)
+      rotateX(30deg) rotateZ(30deg);
+  }
+}
+}
+
 </style>

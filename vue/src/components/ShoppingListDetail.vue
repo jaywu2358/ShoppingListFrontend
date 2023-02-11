@@ -9,11 +9,12 @@
             <thead>
             <tr>
                 <th>Item Name</th>
-                <th>Quantity</th>
+                <th>Qty</th>
                 <th>Date Added</th>
-                <th>Created By</th>
+                <th>Added By</th>
                 <th>Date Modified</th>
                 <th>Modified By</th>
+                <th>Make Change</th>
             </tr>
             </thead>
             <tbody>
@@ -25,10 +26,10 @@
                     <td>{{ item.createdBy }}</td>
                     <td>{{ item.dateModified }}</td>
                     <td>{{ item.modifiedBy }}</td>
-                                        
+                    <td>                 
                     <div id="modify-form">
                         
-                        <button
+                        <button                                                
                         id="modify-form-button"
                         href="#"
                         v-bind:key="item.itemId"
@@ -51,6 +52,7 @@
                         </form>
                         </div>
                     </div>
+                    </td>   
                     
                     
                 </tr>
@@ -193,7 +195,8 @@ export default {
 
 }
 div#modify-form {
-    padding-bottom: 10px;
+    
+    padding-top: 10px;
 }
 
 tr {
@@ -245,6 +248,8 @@ table {
                         ". table-grid table-grid ."
                         ". add-form . . "
                         ". clear-list . .";
+    width: 90vw;
+    max-width: 100%;
  
 }
 
@@ -306,5 +311,128 @@ input {
   color:  rgb(48, 48, 48); 
   font-weight:  400;
   
+}
+
+@media only screen and (max-device-width: 480px) {
+    div#modify-form {
+    margin-bottom: 10px;
+}
+
+tr {
+    color:rgb(59, 55, 42);
+    text-transform: uppercase;   
+}
+td:hover{
+    background-color: rgba(125, 118, 96, 0.6);
+    transition: 0.7s;
+    border-radius: 12px;
+}
+
+th, td {
+    border-bottom: 1.25px solid rgb(59, 55, 42);
+    font-size: 10px;
+    padding: 5px;
+    
+}
+
+
+
+
+table {
+    max-width: 100%;
+    grid-area: table-grid;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background:  linear-gradient( 45deg, rgba(132, 117, 76, 0.6), rgba(255, 255, 255));
+    border-radius: 12px;
+    
+}
+
+.board-actions {
+  text-align: center;
+  padding: 20px 0;
+}
+.board-actions a:link,
+.board-actions a:visited {
+  color: blue;
+  text-decoration: none;
+}
+.board-actions a:hover {
+  text-decoration: underline;
+}
+
+#container {
+    display: grid;
+    padding-top: 75px;
+    grid-template-columns: 0fr 2fr 2fr 0fr;
+    grid-template-areas:". h3 h3 ." 
+                        ". table-grid table-grid ."
+                        ". add-form . . "
+                        ". clear-list . .";
+    width: 100vw;
+    max-width:100%;
+}
+
+h3 {
+    color:rgb(59, 55, 42);
+    grid-area: h3;
+    font-size: 16px;
+}
+
+#add-form {
+    grid-area: add-form;
+}
+
+#clear-list {
+    grid-area:clear-list;
+}
+
+button {
+  width:  auto;
+  min-width:  50px;
+  border-radius:  12px; 
+  text-align:  center;
+  margin-top:10px; 
+  margin-right:5px;
+  padding:  5px 20px;  
+  color:  rgb(80, 80, 80); 
+  background-color: rgba(135, 122, 88, 0.45);
+  font-size:  14px; 
+  box-shadow:  0px 2px 4px -1px rgba(109, 103, 103, 0.712); 
+  border:  none; 
+  
+}
+
+button:active {
+  background-color: rgb(128, 128, 128);
+  border: 4px solid rgb(53, 53, 53);
+  transition: 0.1s;
+  
+}
+
+button:hover {
+  background-color:  rgb(60, 60, 60);
+  color: rgb(217, 217, 217);
+  transition: 0.6s;
+}
+
+input {
+
+  font-size:  12px; 
+  padding:  10px 10px 10px 10px;
+  margin: 10px; 
+  height:  26px; 
+  border:  none; 
+  border-radius: 12px;
+  border-bottom:  solid 1px rgba(0,0,0,.1); 
+  background:  #fff; 
+  width:  auto; 
+  box-sizing:  border-box; 
+  transition:  all .3s linear; 
+  color:  rgb(48, 48, 48); 
+  font-weight:  400;
+  
+}
 }
 </style>

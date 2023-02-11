@@ -544,4 +544,242 @@ a:hover {
 }
 
 
+@media only screen and (max-device-width: 480px) {
+  h3 {
+  color: rgb(84, 81, 81);
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+
+#container {
+  padding-top:75px;
+  width: 100vw;
+  --bg: hsl(0, 100%, 10%);
+  --color: rgb(54, 53, 52);
+  --underline-width: 100%;
+  --underline-block-width: 20px;
+  --underline-color: rgba(162, 146, 115, 0);
+  --underline-color-hover: rgb(217, 208, 184);
+  --underline-transition: 0.5s;
+    display:grid;
+    grid-column-gap: 10px;
+    grid-template-columns: 0fr 4fr 0fr;
+    grid-template-areas: 
+                        ". shoppinglist-title ."
+                        ". shopping-lists . "
+                        ". create-shopping-list ."
+                        ". group-title . "
+                        ". group-lists . "
+                        ". create-group . "
+                        ". invite-title. "
+                        ". invite-lists . "
+
+}
+
+#shoppinglist-title {
+    grid-area: shoppinglist-title;
+    text-align: center;
+}
+
+#group-title {
+    grid-area: group-title;
+    text-align: center;
+}
+
+#invite-title {
+    grid-area: invite-title;
+    text-align: center;
+}
+
+.invite-lists {
+  
+  grid-area: shopping-lists;
+  grid-area: invite-lists;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 15px;
+  border: 1px solid rgb(96, 96, 96);
+  padding: 10px;
+  border-radius: 12px;
+  align-items: center;
+  
+  border:  none;
+  
+}
+.invite-list {
+  background:  linear-gradient( 45deg, rgba(132, 117, 76, 0.6), rgba(255, 255, 255));
+  border-radius: 10px;
+  padding: 20px; 
+  margin: 0 20px;
+  width: 90%;
+  text-align: center;
+  box-shadow:  0px 2px 6px -1px rgba(109, 103, 103, 0.712); 
+  border:  none;
+  color: rgb(54, 52, 52);
+}
+
+
+
+
+.group-lists {
+
+  grid-area: shopping-lists;
+  display:flex;
+  flex-direction: column;
+  grid-area: group-lists;
+  grid-gap: 20px;
+  border-top: 1px solid rgb(96, 96, 96);
+  border-bottom: 1px solid rgb(96, 96, 96);
+  padding: 10px;
+  border-radius: 12px;
+  align-items: center;
+  
+  border:  none;
+    
+}
+
+.shopping-lists {
+  grid-area: shopping-lists;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 20px;
+  border: 1px solid rgb(96, 96, 96);
+  padding: 10px;
+  border-radius: 12px;
+  align-items: center;
+  border:  none;
+}
+
+.shopping-list {
+  background:  linear-gradient( 45deg, rgba(132, 117, 76, 0.6), rgba(255, 255, 255));
+  border-radius: 10px;
+  padding: 15px;
+  margin: 0 20px;
+  width: 90%;
+  text-align: center;
+  box-shadow:  0px 2px 6px -1px rgba(109, 103, 103, 0.712); 
+  border:  none;
+  
+}
+
+.group-list {
+  background:  linear-gradient( 45deg, rgba(132, 117, 76, 0.6), rgba(255, 255, 255));
+  border-radius: 10px;
+  padding: 15px;
+  width: 90%;
+  margin: 0 20px;
+  text-align: center;
+  box-shadow:  0px 2px 6px -1px rgba(109, 103, 103, 0.712); 
+  border:  none;
+}
+
+.loading {
+  flex: 3;
+}
+.board a:link,
+.board a:visited {
+  color: rgb(243, 243, 243);
+  text-decoration: none;
+}
+
+#create-shopping-list {
+  grid-area: create-shopping-list;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+#create-group {
+  grid-area: create-group;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+button {
+  width:  auto;
+  min-width:  50px;
+  border-radius:  12px; 
+  text-align:  center;
+  margin-top:10px; 
+  padding:  5px 20px;  
+  color:  rgb(80, 80, 80); 
+  background-color: rgba(135, 122, 88, 0.45);
+  font-size:  14px; 
+  box-shadow:  0px 2px 4px -1px rgba(109, 103, 103, 0.712); 
+  border:  none; 
+  
+}
+
+button:active {
+  background-color: rgb(128, 128, 128);
+  border: 4px solid rgb(53, 53, 53);
+  transition: 0.1s;
+  
+}
+
+button:hover {
+  background-color:  rgb(60, 60, 60);
+  color: rgb(217, 217, 217);
+  transition: 0.6s;
+}
+
+input {
+
+  font-size:  16px; 
+  padding:  10px 10px 10px 10px;
+  margin: 10px; 
+  height:  36px; 
+  border:  none; 
+  border-radius: 12px;
+  border-bottom:  solid 1px rgba(0,0,0,.1); 
+  background:  #fff; 
+  width:  auto; 
+  box-sizing:  border-box; 
+  transition:  all .3s linear; 
+  color:  #000; 
+  font-weight:  400;
+  
+}
+
+.msg {
+  color: rgb(186, 81, 81);
+}
+.cmsg{
+  color: rgb(105, 143, 105);
+}
+
+
+
+a {
+  display:block;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: var(--color);
+  text-decoration: none;
+  background-image: linear-gradient(90deg, var(--bg), var(--bg)),
+    linear-gradient(90deg, var(--underline-color), var(--underline-color));
+  background-size: var(--underline-block-width) var(--underline-width),
+    100% var(--underline-width);
+  background-repeat: no-repeat;
+  background-position-x: calc(var(--underline-block-width) * -1), 0;
+  background-position-y: 100%;
+  transition: background-position-x var(--underline-transition);
+}
+
+a:hover {
+  background-image: linear-gradient(90deg, var(--bg), var(--bg)),
+    linear-gradient(
+      90deg,
+      var(--underline-color-hover),
+      var(--underline-color-hover)
+    );
+  background-position-x: calc(100% + var(--underline-block-width)), 0;
+}
+}
+
+
 </style>

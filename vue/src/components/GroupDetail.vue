@@ -301,5 +301,110 @@ a:hover {
   background-position-x: calc(100% + var(--underline-block-width)), 0;
 }
 
+@media only screen and (max-device-width: 480px) {
+    h3 {
+  color: rgb(54, 52, 52);
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+
+#container {
+    padding-top: 100px;
+    display:grid;
+    grid-template-columns: 0fr 1fr 0fr;
+    grid-template-areas: 
+                        ". shoppinglist-title  . "
+                        ". shopping-lists  . "
+                        ". create-shopping-list  . "
+                        ". invite-user  . "
+                        ;
+      --bg: hsl(0, 100%, 10%);
+  --color: rgb(54, 52, 52);
+  --underline-width: 100%;
+  --underline-block-width: 20px;
+  --underline-color: rgba(255, 255, 255, 0);
+  --underline-color-hover: rgb(217, 208, 184);
+  --underline-transition: 0.5s;
+
+}
+
+#shoppinglist-title {
+    grid-area: shoppinglist-title;
+    text-align: center;
+}
+
+#member-title {
+    grid-area: member-title;
+    text-align: center;
+}
+
+.shopping-lists {
+  grid-area: shopping-lists;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px; 
+  align-items: center;
+  
+}
+
+.shopping-list {
+  background:  linear-gradient( 45deg, rgba(132, 117, 76, 0.6), rgba(255, 255, 255));
+  background-color:  linear-gradient(#AD8CEA, #50DFB2);
+  border-radius: 10px;
+  padding: 20px;
+
+  margin: 0 20px;
+  width: 60%;
+  text-align: center;
+  box-shadow:  0px 2px 6px -1px rgba(109, 103, 103, 0.712); 
+  border:  none;
+  color: rgb(54, 52, 52);
+}
+
+.member-lists {
+  grid-area: member-lists;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+#create-shopping-list {
+    grid-area: create-shopping-list;
+    text-align: center;
+}
+
+#invite-user {
+    grid-area: invite-user;
+    text-align: center;
+}
+
+a {
+  display:block;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: var(--color);
+  text-decoration: none;
+  background-image: linear-gradient(90deg, var(--bg), var(--bg)),
+    linear-gradient(90deg, var(--underline-color), var(--underline-color));
+  background-size: var(--underline-block-width) var(--underline-width),
+    100% var(--underline-width);
+  background-repeat: no-repeat;
+  background-position-x: calc(var(--underline-block-width) * -1), 0;
+  background-position-y: 100%;
+  transition: background-position-x var(--underline-transition);
+}
+
+a:hover {
+  background-image: linear-gradient(90deg, var(--bg), var(--bg)),
+    linear-gradient(
+      90deg,
+      var(--underline-color-hover),
+      var(--underline-color-hover)
+    );
+  background-position-x: calc(100% + var(--underline-block-width)), 0;
+}
+}
 
 </style>
